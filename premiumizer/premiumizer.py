@@ -2112,9 +2112,10 @@ def upload_filehost(urls):
 def upload_nzb(filename):
     logger.debug('def upload_nzb started')
     payload = {'apikey': cfg.prem_apikey}
+    folder_id = "1ULy3ff74lrtMlcvQ5yONQ"
     files = {'src': open(filename, 'rb')}
     logger.debug('Uploading nzb to the cloud: %s', filename)
-    r = prem_connection("postfile", "https://www.premiumize.me/api/transfer/create", payload, files)
+    r = prem_connection("postfile", "https://www.premiumize.me/api/transfer/create", payload, files, folder_id)
     if 'failed' not in r:
         response_content = json.loads(r.content)
         if response_content['status'] == "success":
@@ -2123,7 +2124,7 @@ def upload_nzb(filename):
         elif response_content[
             'message'] == 'An error occured. Please try again and contact customer service if the problem persists.':
             gevent.sleep(10)
-            r = prem_connection("postfile", "https://www.premiumize.me/api/transfer/create", payload, files)
+            r = prem_connection("postfile", "https://www.premiumize.me/api/transfer/create", payload, files, folder_id)
             if 'failed' not in r:
                 response_content = json.loads(r.content)
                 if response_content['status'] == "success" or response_content[

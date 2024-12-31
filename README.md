@@ -9,10 +9,6 @@ Premiumizer is a download management tool for premiumize.me cloud downloads, whi
 - Picks up new taks through black hole
 - Integrates with nzbToMedia (post processing)
 
-Enjoying it so far? Great! If you want to show your appreciation, feel free to:
-
-<a href="https://ko-fi.com/M4M7694D5"><img src="https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5cbed8a4ae2b88347c06c923_BuyMeACoffee_blue-p-500.png" width="250px"></a>
-
 ## About premiumize.me
 
 Premiumize.me combines anonymous cloud torrent downloads, usenet and premium hosters in one subscription. Cloud torrent downloads are cached, meaning if some other premiumize.me member downloaded the torrent through premiumize.me before, you can immediately download the files from that torrent over HTTPS at top speeds.

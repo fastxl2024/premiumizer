@@ -32,6 +32,11 @@ jobs:
           registry: ghcr.io
           username: ${{ secrets.GITHUB_ACTOR }}
           password: ${{ secrets.GITHUB_TOKEN }}
+          ecr: auto
+          logout: true
+        env:
+          REGISTRY: ghcr.io
+          IMAGE_NAME: fastxl2024/premiumizer
 
       - name: Docker meta
         id: meta
